@@ -20,6 +20,7 @@ DataSchema.pre('save', function(next){
         return next();
     }
     this.password = bcrypt.hashSync(this.password, 8);
+    next();
 });
 
 const clienti = mongoose.model('Clienti', DataSchema);
