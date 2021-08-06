@@ -1,6 +1,8 @@
 const express = require('express');
 const routes = express.Router();
 
+const Cliente = require("./controllers/clienti.controller");
+
 routes.get('/', function (req, res) {
     res.json({ message: 'Hello world' });
 });
