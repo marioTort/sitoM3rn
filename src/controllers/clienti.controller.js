@@ -3,9 +3,8 @@ const Cliente = require('../models/cliente.model');
 
 module.exports = {
     index(req, res) {
-        res.json({
-            message:'Hello world'
-        });
+        const user = Cliente.find();
+        res.json(user);
     },
     async create(req, res) {
         const { nomeCliente, cognomeCliente, dataNascita, nTelefono, codiceFiscale, nPatente, tipoPatente, email, password } = req.body;
